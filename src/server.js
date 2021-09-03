@@ -1,10 +1,15 @@
-import express from "express";
+function requireHTTPS(req, res, next) {
+  if (!req.secure && req.get('x-forwarded-proto') !== 'https') {
+    return res.redirect('https://' + req.get('host') + req.url);
+  }
+  next();
+}
+const express = require('express');
 const app = express();
+app.use(requireHTTPS);
 
-app.use(static(__dirname + '/dist'));
+app.use(express.static(`./dist/`));
 
-app.all('*', (req, res) => {
-  res.status(200).sendFile(__dirname + '/dist/index.html');
-});
+app.get('/*', (req, res) => res.sendFile('index.html', { root: 'dist/' }));
 
 app.listen(process.env.PORT || 8080);
