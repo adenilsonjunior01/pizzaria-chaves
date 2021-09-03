@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="footer" :class="footerClass">
     <ul>
       <li v-for="item in medias" :key="item.id">
         <a href=""></a> <img :src="item.src" alt="">
@@ -7,7 +7,7 @@
     </ul>
     <hr class="divide-yellow-800 mb-3">
     <div class="copy">
-      <p>2021 Pizzaria e Lanchonete do Chaves. Desenvolvido por
+      <p>2021 - Pizzaria e Lanchonete do Chaves. Desenvolvido por
         <a href="https://github.com/adenilsonjunior01" target="_blank">Adenilson Junior</a></p>
     </div>
   </footer>
@@ -18,6 +18,10 @@ import { defineComponent } from 'vue'
 
 export default defineComponent({
   name: 'SocialMedia',
+  props: [ 'isVisible', 'footerClass'],
+  created() {
+    console.log(this["isVisible"]);
+    },
   data() {
     return {
       medias: [
@@ -50,7 +54,7 @@ interface ISocialMedia {
 </script>
 
 <style scoped>
-  footer {
+  .footer {
     @apply w-4/5;
   }
 
@@ -72,7 +76,7 @@ interface ISocialMedia {
   }
 
   .copy {
-    @apply text-gray-50 text-xs tracking-wider text-center pb-3 font-medium;
+    @apply text-gray-50 text-xs tracking-wider text-center p-2 font-medium;
   }
 
   .copy p a {

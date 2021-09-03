@@ -3,6 +3,7 @@
     <ul>
       <router-link to="/" tag="li" active-class="active" exact><a>Início</a></router-link>
       <router-link to="/cardapio" tag="li" active-class="active"><a>Cardápio</a></router-link>
+      <router-link to="/pizzas" tag="li" active-class="active"><a>Pizzas</a></router-link>
       <router-link to="/contato" tag="li" active-class="active"><a>Contato</a></router-link>
     </ul>
   </nav>

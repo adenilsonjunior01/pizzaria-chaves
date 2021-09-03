@@ -1,9 +1,6 @@
 <template>
   <div class="bg-contato">
-    <div class="title animate__animated animate__fadeInLeft">
-      <img src="../assets/icons/pizza-icon.png" alt="Icon Contato">
-      <h1 class="pl-3">Contato</h1>
-    </div>
+    <TitlePages title="Contato"/>
     <div class="contato animate__animated animate__fadeInLeft">
       <div class="endereco mt-5">
         <h1>Endereço</h1>
@@ -25,8 +22,11 @@
 </template>
 
 <script>
+import TitlePages from "../components/TitlePages.vue";
+
 export default {
-  name: "Contato"
+  name: "Contato",
+  components: {TitlePages}
 }
 </script>
 
@@ -35,14 +35,6 @@ export default {
   @apply overflow-hidden pt-20;
   background-image: url("src/assets/images/bg-contato.jpg");
   background-size: cover;
-}
-
-.title {
-  @apply ml-10 text-xl uppercase font-semibold p-2 pl-6 border-l-4 inline-flex items-center;
-  color: #FCF6EC;
-  background-color: #242424;
-  width: 190px;
-  border-color: #FAB940;
 }
 
 .contato {

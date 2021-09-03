@@ -1,10 +1,10 @@
 <template>
   <div class="bg-cardapio ">
-    <div class="title animate__animated animate__fadeInLeft">
-      <img src="../assets/icons/pizza-icon.png" alt="Icon Cardápio">
-      <h1 class="pl-3">Cardápio</h1>
-    </div>
-    <CardapioPizzas :menu="menu" class="animate__animated animate__fadeInLeft"/>
+    <TitlePages title="Cardápio"/>
+    <CardapioPizzas
+        :menu="menu"
+        :acrescimos="acrescimos"
+        class="animate__animated animate__fadeInLeft"/>
   </div>
 </template>
 
@@ -12,17 +12,21 @@
 import {defineComponent} from "vue";
 import {MockCardapio} from "../mocks/mock-cardapio";
 import CardapioPizzas from "../components/layout/CardapioPizzas.vue";
+import TitlePages from "../components/TitlePages.vue";
 
 export default defineComponent({
   name: "Cardapio",
-  components: {CardapioPizzas},
+  components: {CardapioPizzas, TitlePages},
   data () {
     return {
-      menu: []
+      menu: [],
+      acrescimos: []
     }
   },
   mounted() {
-    this.menu = new MockCardapio().cardapio();
+    const cardapio = new MockCardapio();
+    this.menu = cardapio.cardapio();
+    this.acrescimos = cardapio.opcoesBorda();
   }
 })
 </script>

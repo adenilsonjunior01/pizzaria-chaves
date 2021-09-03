@@ -165,15 +165,19 @@ export class MockCardapio {
                 subtitulo: 'Acréscimo R$3,00',
                 items: [
                     {
+                        id: 1,
                         descricao: 'Catupiry'
                     },
                     {
+                        id: 2,
                         descricao: 'Cheddar'
                     },
                     {
+                        id: 3,
                         descricao: 'Creme de batata'
                     },
                     {
+                        id: 4,
                         descricao: 'Chocolate para Pizza de banana'
                     },
                 ]

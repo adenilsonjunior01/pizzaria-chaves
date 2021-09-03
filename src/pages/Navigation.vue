@@ -1,11 +1,11 @@
 <template>
-  <div class="bg-menu">
+  <div class="bg-menu"><!--animate__animated animate__fadeOutLeft-->
     <div id="menu">
       <img src="../assets/logo.png" alt="Logo - Pizzaria e Lanchonete do Chaves">
       <h1 class="text-logo">Pizzaria e Lanchonete do Chaves</h1>
       <MenuList/>
     </div>
-    <SocialMedia/>
+    <SocialMedia :isVisible="true"/>
   </div>
 </template>
 
