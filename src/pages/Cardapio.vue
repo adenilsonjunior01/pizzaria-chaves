@@ -34,7 +34,7 @@ export default defineComponent({
 <style scoped lang="css">
   .bg-cardapio {
     @apply pt-20;
-    background-image: url("src/assets/images/bg-cardapio.jpg");
+    background-image: url("/src/assets/images/bg-cardapio.jpg");
     background-size: cover;
     background-attachment: fixed;
   }

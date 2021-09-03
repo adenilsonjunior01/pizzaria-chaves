@@ -33,7 +33,7 @@ export default {
 <style scoped>
 .bg-contato {
   @apply overflow-hidden pt-20;
-  background-image: url("src/assets/images/bg-contato.jpg");
+  background-image: url("/src/assets/images/bg-contato.jpg");
   background-size: cover;
 }
 

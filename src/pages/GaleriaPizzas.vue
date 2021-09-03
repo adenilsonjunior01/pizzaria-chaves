@@ -30,7 +30,7 @@ export default {
 
 .content {
   @apply overflow-hidden pt-20 relative;
-  background-image: url("src/assets/images/bg-galeria.jpg");
+  background-image: url("/src/assets/images/bg-galeria.jpg");
   background-size: cover;
 
   span {
