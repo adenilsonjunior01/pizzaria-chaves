@@ -14,7 +14,7 @@
       </div>
       <div class="telefone mt-8">
         <h1>Horário de Funcionamento</h1>
-        <p><strong>Seg - Sex /</strong> 18h00 - 00h00</p>
+        <p><strong>Segunda - Sexta /</strong> 18h00 - 00h00</p>
         <p><strong>Closed</strong></p>
       </div>
     </div>
