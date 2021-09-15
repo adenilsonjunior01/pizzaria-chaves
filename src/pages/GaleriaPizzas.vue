@@ -29,7 +29,7 @@ export default {
 <style scoped lang="scss">
 
 .content {
-  @apply overflow-hidden pt-20 relative;
+  @apply overflow-hidden pt-20 relative block;
   background-image: url("/src/assets/images/bg-galeria.jpg");
   background-size: cover;
 
