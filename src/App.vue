@@ -2,11 +2,12 @@
     <div class="grid grid-flow-col grid-menu-nav h-screen">
       <div class="content z-50" :class="{'open': showNav}">
         <div class="content__btn-logo">
+          <router-link to="/"><img src="../src/assets/logo.png" alt="Logo - Pizzaria e Lanchonete do Chaves">
+          </router-link>
+          <p>Pizzaria & Lan. do Chaves</p>
           <button @click="showNav = !showNav" id="btn-mobile">
             <span id="hamburguer"></span>
           </button>
-          <router-link to="/"><img src="../src/assets/logo.png" alt="Logo - Pizzaria e Lanchonete do Chaves">
-          </router-link>
         </div>
 
         <!-- Menu de Navegação - Mobile -->
@@ -64,10 +65,14 @@ main {
 }
 
 .content {
-  @apply absolute w-full h-auto;
+  @apply absolute w-full h-auto hidden;
 
   &__btn-logo {
-    @apply flex items-center mb-2;
+    @apply flex items-center mb-2 justify-between;
+
+    p {
+      @apply text-gray-50 uppercase tracking-wide;
+    }
   }
 }
 
@@ -120,6 +125,10 @@ button {
   }
 }
 
+#title-mobile {
+  @apply hidden;
+}
+
 
 @media (max-width: 640px) {
   #btn-mobile {
@@ -128,6 +137,10 @@ button {
 
   #menu {
     display: none;
+  }
+
+  .content  {
+    @apply block;
   }
 
   .grid-menu-nav {
